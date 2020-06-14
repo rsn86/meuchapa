@@ -11,6 +11,7 @@ import 'modules/terapia/terapia_module.dart';
 import 'shared/auth/auth_controller.dart';
 import 'shared/auth/repositories/auth_repository_interface.dart';
 import 'shared/auth/repositories/firebase_auth_repository.dart';
+import 'splash/splash_page.dart';
 
 class AppModule extends MainModule {
   @override
@@ -22,7 +23,8 @@ class AppModule extends MainModule {
 
   @override
   List<Router> get routers => [
-        Router(Modular.initialRoute, module: LoginModule()),
+        Router(Modular.initialRoute, child: (context, args) => const SplashPage()),
+        Router('/login', module: LoginModule(), transition: TransitionType.noTransition),
         Router('/home', module: HomeModule()),
         Router('/terapia', module: TerapiaModule()),
         Router('/recompensas', module: RecompensasModule()),

@@ -6,10 +6,15 @@ import 'repositories/auth_repository_interface.dart';
 
 part 'auth_controller.g.dart';
 
+enum AuthStatus { loading, loggedin, loggedout }
+
 class AuthController = _AuthControllerBase with _$AuthController;
 
 abstract class _AuthControllerBase with Store {
   final IAuthRepository _authRepository = Modular.get();
+
+  @observable
+  AuthStatus status = AuthStatus.loading;
 
   @observable
   FirebaseUser user;
@@ -21,6 +26,7 @@ abstract class _AuthControllerBase with Store {
   @action // ignore: use_setters_to_change_properties
   void _setUser(FirebaseUser value) {
     user = value;
+    status = user != null ? AuthStatus.loggedin : AuthStatus.loggedout;
   }
 
   @action
@@ -30,7 +36,7 @@ abstract class _AuthControllerBase with Store {
 
   @action
   Future logout() {
-    user = null;
+    //user = null;
     return _authRepository.logout();
   }
 }

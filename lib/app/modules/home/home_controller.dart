@@ -19,6 +19,6 @@ abstract class _HomeControllerBase with Store {
   @action
   Future logout() async {
     await Modular.get<AuthController>().logout();
-    Modular.to.pushReplacementNamed('/');
+    Modular.to.pushReplacementNamed('/login');
   }
 }
