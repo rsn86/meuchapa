@@ -48,7 +48,7 @@ class _HomePageState extends ModularState<HomePage, HomeController> {
           items: const [
             BottomNavigationBarItem(
               icon: Icon(Icons.local_hospital),
-              title: Text('Terapia'),
+              title: Text('Meu Chapa'),
             ),
             BottomNavigationBarItem(
               icon: Icon(Icons.monetization_on),
