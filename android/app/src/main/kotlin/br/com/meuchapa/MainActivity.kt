@@ -1,4 +1,4 @@
-package br.com.meuchapa.meuchapa
+package br.com.meuchapa
 
 import io.flutter.embedding.android.FlutterActivity
 
