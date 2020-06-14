@@ -1,16 +1,16 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_modular/flutter_modular.dart';
-import 'recompensas_controller.dart';
+import 'terapia_controller.dart';
 
-class RecompensasPage extends StatefulWidget {
+class TerapiaPage extends StatefulWidget {
   final String title;
-  const RecompensasPage({Key key, this.title = "Recompensas"}) : super(key: key);
+  const TerapiaPage({Key key, this.title = "Terapia"}) : super(key: key);
 
   @override
-  _RecompensasPageState createState() => _RecompensasPageState();
+  _TerapiaPageState createState() => _TerapiaPageState();
 }
 
-class _RecompensasPageState extends ModularState<RecompensasPage, RecompensasController> {
+class _TerapiaPageState extends ModularState<TerapiaPage, TerapiaController> {
   //use 'controller' variable to access controller
 
   @override
