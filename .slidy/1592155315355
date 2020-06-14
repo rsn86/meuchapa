@@ -1,0 +1,5 @@
+lib/app/modules/sos/sos_module.dart
+lib/app/modules/sos/sos_page.dart
+test/app/modules/sos/sos_page_test.dart
+lib/app/modules/sos/sos_controller.dart
+test/app/modules/sos/sos_controller_test.dart
