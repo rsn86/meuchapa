@@ -1,0 +1,103 @@
+include: package:effective_dart/analysis_options.yaml
+
+analyzer:
+  exclude:
+    - build/**
+    - assets/**
+    - lib/**.g.dart
+    - test/**
+  strong-mode:
+    implicit-casts: true
+    implicit-dynamic: true
+  errors:
+    missing_required_param: error
+    parameter_assignments: error
+    missing_return: error
+    empty_catches: error
+
+# https://dart-lang.github.io/linter/lints/
+linter:
+  rules:
+    public_member_api_docs: false
+    directives_ordering: false
+    avoid_types_as_parameter_names: true
+    avoid_web_libraries_in_flutter: true
+    empty_statements: true
+    invariant_booleans: true
+    iterable_contains_unrelated_type: true
+    list_remove_unrelated_type: true
+    no_duplicate_case_values: true
+    no_logic_in_create_state: true
+    unnecessary_statements: true
+    use_key_in_widget_constructors: true
+    valid_regexps: true
+    always_declare_return_types: true
+    always_put_control_body_on_new_line: true
+    always_put_required_named_parameters_first: false
+    always_require_non_null_named_parameters: true
+    annotate_overrides: true
+    avoid_annotating_with_dynamic: false
+    avoid_as: true
+    avoid_bool_literals_in_conditional_expressions: true
+    avoid_escaping_inner_quotes: true
+    avoid_renaming_method_parameters: true
+    avoid_returning_null_for_void: true
+    avoid_single_cascade_in_expression_statements: true
+    avoid_unnecessary_containers: true
+    avoid_unused_constructor_parameters: true
+    avoid_void_async: true
+    await_only_futures: true
+    cascade_invocations: true
+    empty_catches: true
+    join_return_with_assignment: true
+    no_runtimeType_toString: true
+    null_closures: true
+    only_throw_errors: true
+    overridden_fields: true
+    parameter_assignments: true
+    prefer_asserts_in_initializer_lists: true
+    prefer_asserts_with_message: true
+    prefer_conditional_assignment: true
+    prefer_const_constructors: true
+    prefer_const_constructors_in_immutables: true
+    prefer_const_declarations: true
+    prefer_const_literals_to_create_immutables: true
+    prefer_constructors_over_static_methods: true
+    prefer_contains: true
+    prefer_expression_function_bodies: false
+    prefer_final_in_for_each: true
+    prefer_final_locals: true
+    prefer_if_elements_to_conditional_expressions: false
+    prefer_if_null_operators: true
+    prefer_inlined_adds: true
+    prefer_is_empty: true
+    prefer_is_not_operator: true
+    prefer_null_aware_operators: true
+    prefer_typing_uninitialized_variables: true
+    provide_deprecation_message: true
+    recursive_getters: true
+    sized_box_for_whitespace: true
+    sort_child_properties_last: true
+    sort_constructors_first: false
+    sort_unnamed_constructors_first: true
+    unawaited_futures: true
+    unnecessary_await_in_return: true
+    unnecessary_null_aware_assignments: true
+    unnecessary_null_in_if_null_operators: true
+    unnecessary_overrides: true
+    unnecessary_parenthesis: true
+    unnecessary_raw_strings: true
+    unnecessary_string_escapes: true
+    unnecessary_string_interpolations: true
+    use_function_type_syntax_for_parameters: true
+    use_is_even_rather_than_modulo: true
+    use_raw_strings: true
+    use_string_buffers: true
+    void_checks: true
+    package_names: true
+    sort_pub_dependencies: true
+    omit_local_variable_types: false
+    lines_longer_than_80_chars: false
+    unnecessary_brace_in_string_interps: false
+    one_member_abstracts: false
+    constant_identifier_names: false
