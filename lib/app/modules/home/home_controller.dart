@@ -9,11 +9,11 @@ class HomeController = _HomeControllerBase with _$HomeController;
 
 abstract class _HomeControllerBase with Store {
   @observable
-  int value = 0;
+  int currentTabIndex = 0;
 
-  @action
-  void increment() {
-    value++;
+  @action // ignore: use_setters_to_change_properties
+  void updateCurrentIndex(int index) {
+    currentTabIndex = index;
   }
 
   @action

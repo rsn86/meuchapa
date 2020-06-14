@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_modular/flutter_modular.dart';
+
+import '../../shared/widgets/meuchapa_appbar.dart';
 import 'terapia_controller.dart';
 
 class TerapiaPage extends StatefulWidget {
@@ -16,9 +18,7 @@ class _TerapiaPageState extends ModularState<TerapiaPage, TerapiaController> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text(widget.title),
-      ),
+      appBar: MeuChapaAppBar.getAppBar(title: widget.title),
       body: Column(
         children: const <Widget>[],
       ),

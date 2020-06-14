@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_modular/flutter_modular.dart';
+
+import '../../shared/widgets/meuchapa_appbar.dart';
 import 'recompensas_controller.dart';
 
 class RecompensasPage extends StatefulWidget {
@@ -16,9 +18,7 @@ class _RecompensasPageState extends ModularState<RecompensasPage, RecompensasCon
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text(widget.title),
-      ),
+      appBar: MeuChapaAppBar.getAppBar(title: widget.title),
       body: Column(
         children: const <Widget>[],
       ),

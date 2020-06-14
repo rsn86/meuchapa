@@ -1,5 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_mobx/flutter_mobx.dart';
 import 'package:flutter_modular/flutter_modular.dart';
+
+import '../recompensas/recompensas_module.dart';
+import '../sos/sos_module.dart';
+import '../terapia/terapia_module.dart';
 import 'home_controller.dart';
 
 class HomePage extends StatefulWidget {
@@ -12,20 +17,59 @@ class HomePage extends StatefulWidget {
 
 class _HomePageState extends ModularState<HomePage, HomeController> {
   //use 'controller' variable to access controller
+  List tabs = [
+    TerapiaModule(),
+    RecompensasModule(),
+    SosModule(),
+  ];
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text(widget.title),
-        leading: IconButton(
-          icon: Icon(Icons.exit_to_app),
-          onPressed: controller.logout,
-        ),
+      body: Observer(
+        builder: (_) {
+          return tabs.elementAt(controller.currentTabIndex);
+        },
       ),
-      body: Column(
-        children: const <Widget>[],
-      ),
+      bottomNavigationBar: _bottomNavBar(),
+    );
+  }
+
+  Widget _bottomNavBar() {
+    return Observer(
+      builder: (_) {
+        return BottomNavigationBar(
+          showSelectedLabels: true,
+          showUnselectedLabels: true,
+          backgroundColor: Colors.white70,
+          type: BottomNavigationBarType.fixed,
+          currentIndex: controller.currentTabIndex,
+          onTap: controller.updateCurrentIndex,
+          items: const [
+            BottomNavigationBarItem(
+              icon: Icon(Icons.local_hospital),
+              title: Text('Terapia'),
+            ),
+            BottomNavigationBarItem(
+              icon: Icon(Icons.monetization_on),
+              title: Text('Recompensas'),
+            ),
+            BottomNavigationBarItem(
+              icon: Icon(
+                Icons.security,
+                color: Colors.red,
+                size: 40,
+              ),
+              title: Text(
+                'SOS',
+                style: TextStyle(
+                  color: Colors.red,
+                ),
+              ),
+            ),
+          ],
+        );
+      },
     );
   }
 }

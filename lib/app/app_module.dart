@@ -5,6 +5,9 @@ import 'app_controller.dart';
 import 'app_widget.dart';
 import 'modules/home/home_module.dart';
 import 'modules/login/login_module.dart';
+import 'modules/recompensas/recompensas_module.dart';
+import 'modules/sos/sos_module.dart';
+import 'modules/terapia/terapia_module.dart';
 import 'shared/auth/auth_controller.dart';
 import 'shared/auth/repositories/auth_repository_interface.dart';
 import 'shared/auth/repositories/firebase_auth_repository.dart';
@@ -21,6 +24,9 @@ class AppModule extends MainModule {
   List<Router> get routers => [
         Router(Modular.initialRoute, module: LoginModule()),
         Router('/home', module: HomeModule()),
+        Router('/terapia', module: TerapiaModule()),
+        Router('/recompensas', module: RecompensasModule()),
+        Router('/sos', module: SosModule()),
       ];
 
   @override
