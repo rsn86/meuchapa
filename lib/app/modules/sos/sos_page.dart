@@ -20,7 +20,12 @@ class _SosPageState extends ModularState<SosPage, SosController> {
     return Scaffold(
       appBar: MeuChapaAppBar.getAppBar(title: widget.title),
       body: Column(
-        children: const <Widget>[],
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: const <Widget>[
+          Center(
+            child: Text('SOS'),
+          ),
+        ],
       ),
     );
   }

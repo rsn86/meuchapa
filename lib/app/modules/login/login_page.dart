@@ -20,10 +20,13 @@ class _LoginPageState extends ModularState<LoginPage, LoginController> {
         title: Text(widget.title),
       ),
       body: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
         children: <Widget>[
-          RaisedButton(
-            onPressed: controller.loginWithPhone,
-            child: const Text('Login'),
+          Center(
+            child: RaisedButton(
+              onPressed: controller.loginWithPhone,
+              child: const Text('Login'),
+            ),
           ),
         ],
       ),

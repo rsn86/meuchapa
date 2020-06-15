@@ -47,11 +47,11 @@ class _HomePageState extends ModularState<HomePage, HomeController> {
           onTap: controller.updateCurrentIndex,
           items: const [
             BottomNavigationBarItem(
-              icon: Icon(Icons.local_hospital),
+              icon: Icon(Icons.thumb_up),
               title: Text('Meu Chapa'),
             ),
             BottomNavigationBarItem(
-              icon: Icon(Icons.monetization_on),
+              icon: Icon(Icons.star),
               title: Text('Recompensas'),
             ),
             BottomNavigationBarItem(

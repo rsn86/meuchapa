@@ -3,6 +3,7 @@ import 'package:flutter_modular/flutter_modular.dart';
 
 import '../../shared/widgets/meuchapa_appbar.dart';
 import 'pages/apresentacao_page.dart';
+import 'pages/audio_page.dart';
 import 'pages/avaliacao_page.dart';
 import 'terapia_controller.dart';
 
@@ -25,12 +26,16 @@ class _TerapiaPageState extends ModularState<TerapiaPage, TerapiaController> {
       appBar: MeuChapaAppBar.getAppBar(title: widget.title),
       body: PageView(
         scrollDirection: Axis.horizontal,
+        physics: const NeverScrollableScrollPhysics(),
         controller: pageController,
         children: <Widget>[
           ApresentacaoPage(
             avancar: () => pageController.jumpToPage(1),
           ),
-          const AvaliacaoPage(),
+          AvaliacaoPage(
+            avancar: () => pageController.jumpToPage(2),
+          ),
+          const AudioPage(),
         ],
       ),
     );
