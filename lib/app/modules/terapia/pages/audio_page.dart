@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_modular/flutter_modular.dart';
+import 'package:meuchapa/app/modules/terapia/widgets/audio_player_widget.dart';
 
 import '../terapia_controller.dart';
 import '../widgets/pergunta_widget.dart';
@@ -44,14 +45,13 @@ class _AudioPageState extends ModularState<AudioPage, TerapiaController> {
               elevation: 1,
               child: Padding(
                 padding: EdgeInsets.all(15),
-                child: Text(
-                    'Atenção Plena\nouça agora                                                                        \n\nPLAYER'),
+                child: AudioPlayerWidget(
+                  filePath: 'assets/audios/desestressando_estrada.mp3',
+                  title: Text('Atenção Plena'),
+                ),
               ),
               // ),
             ),
-          ),
-          const SizedBox(
-            height: 10,
           ),
           Container(
             alignment: Alignment.centerLeft,
@@ -63,8 +63,10 @@ class _AudioPageState extends ModularState<AudioPage, TerapiaController> {
               elevation: 1,
               child: Padding(
                 padding: EdgeInsets.all(15),
-                child: Text(
-                    'Desestressando na Estrada\nouça agora                                                                        \n\nPLAYER'),
+                child: AudioPlayerWidget(
+                  filePath: 'assets/audios/desestressando_estrada.mp3',
+                  title: Text('Desestressando na Estrada'),
+                ),
               ),
               // ),
             ),

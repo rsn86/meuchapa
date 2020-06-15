@@ -37,7 +37,7 @@ class _AudioPlayerWidgetState extends State<AudioPlayerWidget> {
             );
           },
           child: Text(
-            _play ? "pause" : "play",
+            _play ? "parar" : "ouvir",
           ),
         ),
       ),
