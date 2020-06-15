@@ -48,7 +48,7 @@ class _HomePageState extends ModularState<HomePage, HomeController> {
           items: const [
             BottomNavigationBarItem(
               icon: Icon(Icons.thumb_up),
-              title: Text('Meu Chapa'),
+              title: Text('Chapa'),
             ),
             BottomNavigationBarItem(
               icon: Icon(Icons.star),

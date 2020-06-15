@@ -6,7 +6,7 @@ import 'recompensas_controller.dart';
 
 class RecompensasPage extends StatefulWidget {
   final String title;
-  const RecompensasPage({Key key, this.title = "Recompensas"}) : super(key: key);
+  const RecompensasPage({Key key, this.title = "Meu Chapa"}) : super(key: key);
 
   @override
   _RecompensasPageState createState() => _RecompensasPageState();
@@ -21,9 +21,72 @@ class _RecompensasPageState extends ModularState<RecompensasPage, RecompensasCon
       appBar: MeuChapaAppBar.getAppBar(title: widget.title),
       body: Column(
         mainAxisAlignment: MainAxisAlignment.center,
-        children: const <Widget>[
-          Center(
-            child: Text('Recompensas'),
+        children: <Widget>[
+          const Center(
+            child: CircleAvatar(
+              backgroundColor: Colors.yellow,
+              radius: 65,
+              child: Text(
+                'Você tem\n20\nPontos',
+                style: TextStyle(
+                  fontWeight: FontWeight.bold,
+                  color: Colors.black54,
+                  fontSize: 22,
+                ),
+                textAlign: TextAlign.center,
+              ),
+            ),
+          ),
+          const SizedBox(
+            height: 30,
+          ),
+          RaisedButton(
+            color: Colors.blueGrey,
+            onPressed: null,
+            shape: RoundedRectangleBorder(
+              borderRadius: BorderRadius.circular(10.0),
+              //side: BorderSide(color: Colors.red),
+            ),
+            padding: const EdgeInsets.only(left: 80, right: 80),
+            child: Text(
+              "Como ganhar pontos",
+              style: TextStyle(
+                color: Colors.white,
+                fontWeight: FontWeight.bold,
+              ),
+            ),
+          ),
+          RaisedButton(
+            color: Colors.blueGrey,
+            onPressed: null,
+            shape: RoundedRectangleBorder(
+              borderRadius: BorderRadius.circular(10.0),
+              //side: BorderSide(color: Colors.red),
+            ),
+            padding: const EdgeInsets.only(left: 75, right: 75),
+            child: Text(
+              "Lista de Recompensas",
+              style: TextStyle(
+                color: Colors.white,
+                fontWeight: FontWeight.bold,
+              ),
+            ),
+          ),
+          RaisedButton(
+            color: Colors.blueGrey,
+            onPressed: null,
+            shape: RoundedRectangleBorder(
+              borderRadius: BorderRadius.circular(10.0),
+              //side: BorderSide(color: Colors.red),
+            ),
+            padding: const EdgeInsets.only(left: 97, right: 97),
+            child: Text(
+              "Como Funciona",
+              style: TextStyle(
+                color: Colors.white,
+                fontWeight: FontWeight.bold,
+              ),
+            ),
           ),
         ],
       ),
